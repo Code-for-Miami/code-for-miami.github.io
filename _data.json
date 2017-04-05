@@ -1,8 +1,8 @@
 {
-  "about-code-for-miami": {
-    "title": "About Code for Miami",
+  "about-code-for-ftl": {
+    "title": "About Code for Fort Lauderdale",
     "header_text": "About Us",
-    "description": "Code for Miami is a Code for America brigade advocating for open data from local Miami governments and creating apps and resources with it."
+    "description": "Code for Fort Lauderdale is a Code for America brigade advocating for open data from local Fort Lauderdale governments and creating apps and resources with it."
   },
   "code-of-conduct": {
     "layout": "_layout_headings_only",
@@ -17,7 +17,7 @@
     "description": "Check out projects, open issues and ideas to get you started with civic hacking"
   },
   "index": {
-    "header_text": "We love Miami.",
+    "header_text": "We love Fort Lauderdale.",
     "subheader_text": "Let's make it better, together."
   },
   "civic-hacking-101": {
