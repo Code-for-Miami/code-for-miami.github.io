@@ -3,4 +3,30 @@ header(class='row main-cta')
         h2 #{ header_text }
         p #{ subheader_text }
         // "Get involved", "Become a Hacker"
+
+        section.row.block
+          .small-12.medium-8.columns
+            h1 Submit your ideas for making Miami great!
+        section(class="row block")
+          div(class="small-12 medium-8 large-5 columns")
+            form(action='https://formspree.io/codeformiami@gmail.com', method='POST', autocomplete='off')
+              label(for='FullName') Full name
+              input(type='text', name='name', id='FullName', placeholder='Type your name here', autocomplete='off', required)
+              label(for='IdeaMessage') Your idea
+              textarea(name='message', id='IdeaMessage', placeholder='My idea is...', autocomplete='off', required)
+              button(type='submit') Send
+              input(type='hidden', name='_subject', value='Miami Improvement Idea', autocomplete='off')
+              input(type='hidden', name='_format', value='plain', autocomplete='off')
+              input(type='hidden', name='_next', value='http://codefor.miami/ideas-thanks', autocomplete='off')
+            .issues.text-muted
+              | Any issues with this form? You can also send an email to
+              a(href='mailto:codeformiami@gmail.com?subject=Miami%20Improvement%20Idea&body=My%20idea%20is...' id='EmailFallback') codeformiami@gmail.com
+              |  with your ideas.
+        script(type='text/javascript').
+          var IM = $("#IdeaMessage")
+          IM.on('input', () => IM.css('height', IM.get(0).scrollHeight + 'px'))
+          $('#EmailFallback').click(e => { e.preventDefault(); window.open(e.target.getAttribute('href')); window.location.href = '/ideas-thanks' })
+        style.
+          form button,form label{font-size:1.075rem;letter-spacing:.0176em}form label{font-family:Effra,sans-serif,"Helvetica Neue",helvetica,arial,sans-serif;padding-bottom:.4rem;text-transform:lowercase}form input[type=text],form textarea{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-weight:400}.issues,form button{font-family:Effra,sans-serif,"Helvetica Neue",helvetica,arial,sans-serif}form button{text-align:center}.issues{line-height:normal}#IdeaMessage{resize:none;min-height:100px;overflow:hidden;box-sizing:border-box}
+
         a(class='button large', href='get-started-with-civic-hacking') Get Involved
