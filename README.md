@@ -23,7 +23,7 @@
     - metadata object key is the name of the Markdown file
 
 ## Deploying
-1. Make sure to compile css
+1. Make sure to compile css by running `harp compile`
 2. Create a commit in the `dev` branch
 3. run `./deploy.sh`
 4. All done
